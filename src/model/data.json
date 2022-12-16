@@ -85,12 +85,9 @@
       "roles": [],
       "startDate": "",
       "endDate": "",
-      "entity": "",
-      "type": "",
-      "displayName": "middle-out-compression",
+      "displayName": "middle out compression",
       "website": "http://www.hooli.xyz/",
       "summary": "Making files smaller",
-      "primaryLanguage": "",
       "languages": [
         "Go",
         "C++"
@@ -98,19 +95,9 @@
       "libraries": [],
       "githubUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
       "repositoryUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
-      "start": {
-        "year": null,
-        "month": null,
-        "day": null
-      },
-      "end": {
-        "year": null,
-        "month": null,
-        "day": null
-      },
       "images": [
         {
-          "resolutions": {
+
             "micro": {
               "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-micro",
               "size": 1228,
@@ -136,7 +123,7 @@
               "height": 277
             }
           }
-        }
+        
       ],
       "videos": [
         {
@@ -146,76 +133,60 @@
         }
       ]
     },
-    {
-      "name": "pied-piper-coin",
+    { 
+      "name": "proyecto-2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "url": "http://www.piedpiper.com/",
+      "url": "http://www.hooli.xyz/",
       "highlights": [],
       "keywords": [],
       "roles": [],
       "startDate": "",
       "endDate": "",
-      "entity": "",
-      "type": "",
-      "displayName": "pied-piper-coin",
-      "website": "http://www.piedpiper.com/",
-      "summary": "The currency of the open web",
-      "primaryLanguage": "",
+      "displayName": "proyecto-2",
+      "website": "http://www.hooli.xyz/",
+      "summary": "Making files smaller",
       "languages": [
-        "TypeScript",
-        "Go"
+        "Go",
+        "C++"
       ],
-      "libraries": [
-        "Node.js",
-        "React"
-      ],
-      "githubUrl": "https://github.com/portfolio-api-demo/pied-piper-coin",
-      "repositoryUrl": "https://github.com/portfolio-api-demo/pied-piper-coin",
-      "start": {
-        "year": null,
-        "month": null,
-        "day": null
-      },
-      "end": {
-        "year": null,
-        "month": null,
-        "day": null
-      },
+      "libraries": [],
+      "githubUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
+      "repositoryUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
       "images": [
         {
-          "resolutions": {
+          
             "micro": {
-              "url": "https://project-images.gitconnectedcontent.com/d9c4429c-de9b-4678-9f32-577dfcf89a08-micro",
-              "size": 1337,
+              "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-micro",
+              "size": 1228,
               "width": 32,
-              "height": 25
+              "height": 22
             },
             "thumbnail": {
-              "url": "https://project-images.gitconnectedcontent.com/d9c4429c-de9b-4678-9f32-577dfcf89a08-thumbnail",
-              "size": 8197,
+              "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-thumbnail",
+              "size": 4326,
               "width": 224,
-              "height": 176
+              "height": 155
             },
             "mobile": {
-              "url": "https://project-images.gitconnectedcontent.com/d9c4429c-de9b-4678-9f32-577dfcf89a08-mobile",
-              "size": 26404,
-              "width": 600,
-              "height": 470
+              "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-mobile",
+              "size": 7821,
+              "width": 400,
+              "height": 277
             },
             "desktop": {
-              "url": "https://project-images.gitconnectedcontent.com/d9c4429c-de9b-4678-9f32-577dfcf89a08-desktop",
-              "size": 28130,
-              "width": 800,
-              "height": 627
+              "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-desktop",
+              "size": 7836,
+              "width": 400,
+              "height": 277
             }
           }
-        }
+        
       ],
       "videos": [
         {
-          "url": "https://www.youtube.com/watch?v=4pWD2ug4kV8",
+          "url": "https://www.youtube.com/watch?v=oGB_VPrld0U&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3",
           "source": "youtube",
-          "sourceId": "4pWD2ug4kV8"
+          "sourceId": "oGB_VPrld0U"
         }
       ]
     }

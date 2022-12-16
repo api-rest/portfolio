@@ -2,8 +2,9 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start-app":"ts-node src/app.ts",
     "start": "ts-node src/model/portfolio.model.ts",
     "test": "jest --watchAll --coverage"
   },
