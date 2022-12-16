@@ -70,13 +70,13 @@ export class PortfolioModel {
 
     saveProject(position: number, project: Project){
 
-        //PUT
-        if(position){
-            myJson.projects.splice(position, 1, project)
-        }else {
-            //POST
-            myJson.projects.push(project)
-        }
+        // //PUT
+        // if(position){
+        //     myJson.projects.splice(position, 1, project)
+        // }else {
+        //     //POST
+        //     myJson.projects.push(project)
+        // }
         
         
     }
