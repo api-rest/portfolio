@@ -4,9 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start-app":"ts-node src/app.ts",
+    "start-app": "ts-node src/app.ts",
     "start": "ts-node src/model/portfolio.model.ts",
-    "test": "jest --watchAll --coverage"
+    "test": "jest --watchAll --coverage",
+    "dev": "nodemon ./src/app.ts"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2"
   }
 }
