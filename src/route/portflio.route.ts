@@ -10,6 +10,9 @@ router.get('/portfolio', portfolioController.getPortfolio)
 router.get('/portfolio/projects', portfolioController.getProjects)
 
 //Get project
-router.get('/portfolio/projects/:id', portfolioController.getProject)
+router.get('/portfolio/projects/:name', portfolioController.getProject)
+
+//Post new project
+router.post('portfolio/projects', portfolioController.addProject)
 
 export default router;

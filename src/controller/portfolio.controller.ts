@@ -16,27 +16,23 @@ export const portfolioController = {
     },
 
     getProject:(req:Request, res:Response)=> {
-        const project = PortfolioModel.getProject(req.params.id);
+        const project = PortfolioModel.getProject(req.params.name);
         console.log(project);
-        return (project !=null)
-         ? res.send(project)
-         : res.sendStatus(404)
-        }
-    }
+        return (project !=null) ? res.send(project) : res.sendStatus(404)  
+    },
+   
 
-    // saveProject(position: number, project: Project){
-
-    //     //PUT
-    //     if(position){
-            
-    //     }else {
-    //         //POST
-            
-    //     }
+    //POST
+    addProject:(req:Request, res:Response) =>{
+        const project = req.body;
+        const newProject = PortfolioModel.addProject(project)
+       
+        console.log(newProject)
+        res.json(newProject)        }
         
         
     // }
     // deleteProject(position: number){
        
-    // }
-} 
+    }
+ 

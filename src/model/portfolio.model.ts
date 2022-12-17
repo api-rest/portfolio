@@ -2,6 +2,7 @@ import { Url } from 'url'
 import myJson from './data.json'
 
 interface Project {
+    "id":number,
     "name":string,
     "description": string,
     "url": string,
@@ -65,13 +66,21 @@ export class PortfolioModel {
         return myJson.projects;
     }
 
-    static getProject(id: number) {
-        const project = myJson.projects.find(p => p.id === id)
+    static getProject(name: string) {
+        const project = myJson.projects.find(p => p.name === name)
         return project;
     }
 
-    saveProject(position: number, project: Project){
+    static addProject(newProject:Project){
+        myJson.projects.push(newProject:Project)
+        
+        return projects;
+    }
 
+    static updateProject(name:string){
+        const updatedProject = myJson.projects.find(p=>p.name ===name)
+        return updatedProject
+    }    
         // //PUT
         // if(position){
         //     myJson.projects.splice(position, 1, project)
@@ -81,8 +90,12 @@ export class PortfolioModel {
         // }
         
         
-    }
-    deleteProject(position: number){
+    
+    static deleteProject(name: string){
+        const project = myJson.projects.find(p => p.name === name)
+
+        const position = project.indexOf(name);
+        console.log(position)
         myJson.projects.splice(position,1)
     }
 
