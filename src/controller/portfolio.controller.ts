@@ -5,18 +5,23 @@ import { PortfolioModel } from '../model/portfolio.model';
 export const portfolioController = {
     getPortfolio:(req:Request, res:Response):void => {
         const response = PortfolioModel.getPortfolio();
-        console.log("Portfolio sent");
+        console.log("Portfolio showed");
         res.json({portfolio:response})
     },
     getProjects:(req:Request, res:Response):void => {
         const response = PortfolioModel.getProjects();
-        console.log("All projects sent");
+        console.log("All projects showed");
         res.json({projects:response})
     },
     getProject: (req:Request, res:Response):void => {
         const response = PortfolioModel.getProject(req.params.id);
-        console.log(`Project in position ${req.params.id} sent`);
+        console.log(`Project in position ${req.params.id} showed`);
         res.json({project:response})      
+    },
+    getProjectsByLanguage: (req:Request, res:Response):void => {
+    const response = PortfolioModel.getProjectByLanguage(req.params.language);
+    console.log(`Projects with ${req.params.language} language showed`);
+    res.json({project:response})      
     },
     newProject: (req:Request, res:Response):void => {
         const { name, description, url, highlights, keywords, roles, startDate, endDate, displayName, website, summary, languages, libraries, githubUrl, repositoryUrl, images, videos } = req.body;

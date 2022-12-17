@@ -7,6 +7,7 @@ const router = Router();
 router.get('/portfolio', portfolioController.getPortfolio);
 router.get('/portfolio/project', portfolioController.getProjects);
 router.get('/portfolio/project/:id', portfolioController.getProject);
+router.get('/portfolio/project/language/:language', portfolioController.getProjectsByLanguage);
 
 //POST
 router.post('/portfolio/project', portfolioController.newProject);
