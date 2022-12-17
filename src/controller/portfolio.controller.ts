@@ -7,14 +7,22 @@ export const portfolioController = {
         const response = PortfolioModel.getPortfolio();
         console.log(response);
         res.json({portfolio:response})
-    }
+    },
 
-    // getProjects() {
-        
-    // }
-    // getProject(position: number) {
-        
-    // }
+    getProjects:(req:Request, res:Response):void => {
+        const response = PortfolioModel.getProjects();
+        console.log(response);
+        res.json({projects:response})
+    },
+
+    getProject:(req:Request, res:Response)=> {
+        const project = PortfolioModel.getProject(req.params.id);
+        console.log(project);
+        return (project !=null)
+         ? res.send(project)
+         : res.sendStatus(404)
+        }
+    }
 
     // saveProject(position: number, project: Project){
 

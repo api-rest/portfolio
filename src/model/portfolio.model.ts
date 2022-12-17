@@ -61,11 +61,13 @@ export class PortfolioModel {
         return myJson;
     }
 
-    getProjects() {
+    static getProjects() {
         return myJson.projects;
     }
-    getProject(position: number) {
-        return myJson.projects[position];
+
+    static getProject(id: number) {
+        const project = myJson.projects.find(p => p.id === id)
+        return project;
     }
 
     saveProject(position: number, project: Project){
