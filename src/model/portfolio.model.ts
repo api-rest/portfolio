@@ -1,5 +1,8 @@
-import { Url } from 'url'
 import myJson from './data.json'
+import fs from 'fs';
+
+const json_portfolio = fs.readFileSync('src/model/data.json', 'utf-8');
+let portfolio = JSON.parse(json_portfolio);
 
 interface Project {
     "name":string,
@@ -57,31 +60,33 @@ interface Video {
 
 export class PortfolioModel {
 
-    static getPortfolio() {
+    static getPortfolio(){
         return myJson;
     }
 
-    getProjects() {
+    static getProjects(){
         return myJson.projects;
     }
-    getProject(position: number) {
-        return myJson.projects[position];
+    static getProject(position: string){
+        return myJson.projects[Number(position)];
     }
 
-    saveProject(position: number, project: Project){
+    static newProject(project: any){
+        portfolio.projects.push(project);
+        const json_portfolio = JSON.stringify(portfolio);
+        fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
 
-        // //PUT
-        // if(position){
-        //     myJson.projects.splice(position, 1, project)
-        // }else {
-        //     //POST
-        //     myJson.projects.push(project)
-        // }
-        
-        
     }
-    deleteProject(position: number){
-        myJson.projects.splice(position,1)
+    static editProject(position: number, project: any){
+        portfolio.projects.splice(position, 1, project);
+        const json_portfolio = JSON.stringify(portfolio);
+        fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
+    }
+
+    static deleteProject(position: number){
+        portfolio.projects.splice(position,1);
+        const json_portfolio = JSON.stringify(portfolio);
+        fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
     }
 
 
