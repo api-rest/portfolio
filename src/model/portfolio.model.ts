@@ -71,13 +71,13 @@ export class PortfolioModel {
         return myJson.projects[Number(position)];
     }
 
-    static newProject(project: any){
+    static newProject(project: Project){
         portfolio.projects.push(project);
         const json_portfolio = JSON.stringify(portfolio);
         fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
 
     }
-    static editProject(position: number, project: any){
+    static editProject(position: number, project: Project){
         portfolio.projects.splice(position, 1, project);
         const json_portfolio = JSON.stringify(portfolio);
         fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
