@@ -70,36 +70,22 @@ export class PortfolioModel {
         return project;
     }
 
-    static addProject= (name:string, description:string, url:string, highlights:string[],              keywords:string[], roles:string[], startDate:Date, endDate:Date, displayName:string, website:string, summary:string, languages:string[], libraries:string[], githubUrl:string, repositoryUrl:string, images:Image[], videos:Video[]):Project =>{
-
-        const newProjectEntry:any ={name, description, url, highlights, keywords, roles, startDate, endDate, displayName, website, summary, languages, libraries, githubUrl, repositoryUrl, images, videos}
+    static addProject(newProject:Project):Project {
         
-        myJson.projects.push(newProjectEntry)
+        myJson.projects.push(newProject)
                 
-        return newProjectEntry;
+        return newProject;
     }
 
-    static updateProject(name:string){
-        const updatedProject = myJson.projects.find(p=>p.name ===name)
+    static updateProject(name:string, updatedProject:Project){
+        myJson.projects != name
+        const project = myJson.projects.find(p => p.name === name)
         return updatedProject
     }    
-        // //PUT
-        // if(position){
-        //     myJson.projects.splice(position, 1, project)
-        // }else {
-        //     //POST
-        //     myJson.projects.push(project)
-        // }
-        
-        
+
+    static deleteProject(name:string){
+
+    }    
     
-    // static deleteProject(name: string){
-    //     const project = myJson.projects.find(p => p.name === name)
-
-    //     const position = project.indexOf(name);
-    //     console.log(position)
-    //     myJson.projects.splice(position,1)
-    // }
-
 
 }

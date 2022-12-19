@@ -15,4 +15,10 @@ router.get('/portfolio/projects/:name', portfolioController.getProject)
 //Post new project
 router.post('portfolio/projects', portfolioController.addProject)
 
+//Update project
+router.put('portfolio/projects', portfolioController.updateProject)
+
+//Delete project
+router.post('portfolio/projects', portfolioController.addProject)
+
 export default router;

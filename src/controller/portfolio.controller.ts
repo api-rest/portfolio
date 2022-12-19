@@ -21,7 +21,7 @@ export const portfolioController = {
     getProject:(req:Request, res:Response)=> {
         const project = PortfolioModel.getProject(req.params.name);
         console.log(project);
-        return (project !=null) ? res.send(project) : res.sendStatus(404)  
+        res.json({projects:project})
     },
    
 
@@ -35,13 +35,19 @@ export const portfolioController = {
             summary, languages, libraries, githubUrl, repositoryUrl, images, videos)
         
             console.log(newProject);
-        res.json(newProject)        
-    }
+        res.status(200).send(newProject)        
+    },
         
     //PUT 
-        
-    // }
-    // deleteProject(position: number){
+    updateProject:(req:Request, res:Response):void =>{
+
+    },
+
+
+   //DELETE 
+   deleteProject:(req:Request, res:Response):void =>{
+    
+   }
        
     }
  
