@@ -5,30 +5,89 @@ import { PortfolioModel } from '../model/portfolio.model';
 export const portfolioController = {
     getPortfolio:(req:Request, res:Response):void => {
         const response = PortfolioModel.getPortfolio();
-        console.log(response);
+        console.log("Portfolio showed");
         res.json({portfolio:response})
+    },
+    getProjects:(req:Request, res:Response):void => {
+        const response = PortfolioModel.getProjects();
+        console.log("All projects showed");
+        res.json({projects:response})
+    },
+    getProject: (req:Request, res:Response):void => {
+        const response = PortfolioModel.getProject(req.params.id);
+        console.log(`Project in position ${req.params.id} showed`);
+        res.json({project:response})      
+    },
+    getProjectsByLanguage: (req:Request, res:Response):void => {
+    const response = PortfolioModel.getProjectByLanguage(req.params.language);
+    console.log(`Projects with ${req.params.language} language showed`);
+    res.json({project:response})      
+    },
+    newProject: (req:Request, res:Response):void => {
+        const { name, description, url, highlights, keywords, roles, startDate, endDate, displayName, website, summary, languages, libraries, githubUrl, repositoryUrl, images, videos } = req.body;
+
+        if (!name || !displayName || !description || !summary) {
+            res.status(400).send("Entries must have a name, a display name, a summary, and a description");
+            return;
+        }        
+
+        const newProject = {
+            name, 
+            description, 
+            url, 
+            highlights, 
+            keywords, 
+            roles, 
+            startDate, 
+            endDate, 
+            displayName, 
+            website, 
+            summary, 
+            languages, 
+            libraries, 
+            githubUrl, 
+            repositoryUrl, 
+            images, 
+            videos
+        }
+
+        PortfolioModel.newProject(newProject);
+        console.log(`New project entered with name ${displayName}`);
+        res.status(200).send(`New project entered with name ${displayName}`);
+        
+        
+    },
+    editProject: (req:Request, res:Response):void => {
+        const { name, description, url, highlights, keywords, roles, startDate, endDate, displayName, website, summary, languages, libraries, githubUrl, repositoryUrl, images, videos } = req.body;   
+
+        const editedProject = {
+            name, 
+            description, 
+            url, 
+            highlights, 
+            keywords, 
+            roles, 
+            startDate, 
+            endDate, 
+            displayName, 
+            website, 
+            summary, 
+            languages, 
+            libraries, 
+            githubUrl, 
+            repositoryUrl, 
+            images, 
+            videos
+        }
+
+        PortfolioModel.editProject(Number(req.params.id), editedProject);
+        console.log(`Project in position ${req.params.id} has been edited`);
+        res.status(200).send(`Project in position ${req.params.id} has been edited`);
+
+    },
+    deleteProject: (req:Request, res:Response):void => {
+        PortfolioModel.deleteProject(Number(req.params.id));
+        console.log(`Project in position ${req.params.id} has been deleted`);
+        res.status(200).send(`Project in position ${req.params.id} has been deleted`);
     }
-
-    // getProjects() {
-        
-    // }
-    // getProject(position: number) {
-        
-    // }
-
-    // saveProject(position: number, project: Project){
-
-    //     //PUT
-    //     if(position){
-            
-    //     }else {
-    //         //POST
-            
-    //     }
-        
-        
-    // }
-    // deleteProject(position: number){
-       
-    // }
 } 

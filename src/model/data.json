@@ -1,4 +1,3 @@
-
 {
   "basics": {
     "name": "Richard Hendricks",
@@ -76,64 +75,7 @@
     }
   ],
   "projects": [
-    { 
-      "name": "middle-out-compression",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "url": "http://www.hooli.xyz/",
-      "highlights": [],
-      "keywords": [],
-      "roles": [],
-      "startDate": "",
-      "endDate": "",
-      "displayName": "middle out compression",
-      "website": "http://www.hooli.xyz/",
-      "summary": "Making files smaller",
-      "languages": [
-        "Go",
-        "C++"
-      ],
-      "libraries": [],
-      "githubUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
-      "repositoryUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
-      "images": [
-        {
-
-            "micro": {
-              "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-micro",
-              "size": 1228,
-              "width": 32,
-              "height": 22
-            },
-            "thumbnail": {
-              "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-thumbnail",
-              "size": 4326,
-              "width": 224,
-              "height": 155
-            },
-            "mobile": {
-              "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-mobile",
-              "size": 7821,
-              "width": 400,
-              "height": 277
-            },
-            "desktop": {
-              "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-desktop",
-              "size": 7836,
-              "width": 400,
-              "height": 277
-            }
-          }
-        
-      ],
-      "videos": [
-        {
-          "url": "https://www.youtube.com/watch?v=oGB_VPrld0U&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3",
-          "source": "youtube",
-          "sourceId": "oGB_VPrld0U"
-        }
-      ]
-    },
-    { 
+    {
       "name": "proyecto-2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "url": "http://www.hooli.xyz/",
@@ -145,42 +87,296 @@
       "displayName": "proyecto-2",
       "website": "http://www.hooli.xyz/",
       "summary": "Making files smaller",
-      "languages": [
-        "Go",
-        "C++"
-      ],
+      "languages": ["Go", "C++"],
       "libraries": [],
       "githubUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
       "repositoryUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
       "images": [
         {
-          
-            "micro": {
-              "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-micro",
-              "size": 1228,
-              "width": 32,
-              "height": 22
-            },
-            "thumbnail": {
-              "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-thumbnail",
-              "size": 4326,
-              "width": 224,
-              "height": 155
-            },
-            "mobile": {
-              "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-mobile",
-              "size": 7821,
-              "width": 400,
-              "height": 277
-            },
-            "desktop": {
-              "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-desktop",
-              "size": 7836,
-              "width": 400,
-              "height": 277
-            }
+          "micro": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-micro",
+            "size": 1228,
+            "width": 32,
+            "height": 22
+          },
+          "thumbnail": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-thumbnail",
+            "size": 4326,
+            "width": 224,
+            "height": 155
+          },
+          "mobile": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-mobile",
+            "size": 7821,
+            "width": 400,
+            "height": 277
+          },
+          "desktop": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-desktop",
+            "size": 7836,
+            "width": 400,
+            "height": 277
           }
-        
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=oGB_VPrld0U&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3",
+          "source": "youtube",
+          "sourceId": "oGB_VPrld0U"
+        }
+      ]
+    },
+    {
+      "name": "Proyecto3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "url": "http://www.hooli.xyz/",
+      "highlights": [],
+      "keywords": [],
+      "roles": [],
+      "startDate": "",
+      "endDate": "",
+      "displayName": "Proyecto 3",
+      "website": "http://www.hooli.xyz/",
+      "summary": "Making files smaller",
+      "languages": ["Go", "C++"],
+      "libraries": [],
+      "githubUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
+      "repositoryUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
+      "images": [
+        {
+          "micro": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-micro",
+            "size": 1228,
+            "width": 32,
+            "height": 22
+          },
+          "thumbnail": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-thumbnail",
+            "size": 4326,
+            "width": 224,
+            "height": 155
+          },
+          "mobile": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-mobile",
+            "size": 7821,
+            "width": 400,
+            "height": 277
+          },
+          "desktop": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-desktop",
+            "size": 7836,
+            "width": 400,
+            "height": 277
+          }
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=oGB_VPrld0U&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3",
+          "source": "youtube",
+          "sourceId": "oGB_VPrld0U"
+        }
+      ]
+    },
+    {
+      "name": "Proyecto-C#",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "url": "http://www.hooli.xyz/",
+      "highlights": [],
+      "keywords": [],
+      "roles": [],
+      "startDate": "",
+      "endDate": "",
+      "displayName": "Proyecto C#",
+      "website": "http://www.hooli.xyz/",
+      "summary": "Making files smaller",
+      "languages": ["C#", "C++"],
+      "libraries": [],
+      "githubUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
+      "repositoryUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
+      "images": [
+        {
+          "micro": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-micro",
+            "size": 1228,
+            "width": 32,
+            "height": 22
+          },
+          "thumbnail": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-thumbnail",
+            "size": 4326,
+            "width": 224,
+            "height": 155
+          },
+          "mobile": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-mobile",
+            "size": 7821,
+            "width": 400,
+            "height": 277
+          },
+          "desktop": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-desktop",
+            "size": 7836,
+            "width": 400,
+            "height": 277
+          }
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=oGB_VPrld0U&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3",
+          "source": "youtube",
+          "sourceId": "oGB_VPrld0U"
+        }
+      ]
+    },
+    {
+      "name": "Proyecto-JS",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "url": "http://www.hooli.xyz/",
+      "highlights": [],
+      "keywords": [],
+      "roles": [],
+      "startDate": "",
+      "endDate": "",
+      "displayName": "Proyecto JS",
+      "website": "http://www.hooli.xyz/",
+      "summary": "Making files smaller",
+      "languages": ["JS", "C++"],
+      "libraries": [],
+      "githubUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
+      "repositoryUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
+      "images": [
+        {
+          "micro": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-micro",
+            "size": 1228,
+            "width": 32,
+            "height": 22
+          },
+          "thumbnail": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-thumbnail",
+            "size": 4326,
+            "width": 224,
+            "height": 155
+          },
+          "mobile": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-mobile",
+            "size": 7821,
+            "width": 400,
+            "height": 277
+          },
+          "desktop": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-desktop",
+            "size": 7836,
+            "width": 400,
+            "height": 277
+          }
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=oGB_VPrld0U&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3",
+          "source": "youtube",
+          "sourceId": "oGB_VPrld0U"
+        }
+      ]
+    },
+    {
+      "name": "Proyecto-Pepe",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "url": "http://www.hooli.xyz/",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "displayName": "Proyecto Pepe",
+      "website": "http://www.hooli.xyz/",
+      "summary": "Making files smaller",
+      "languages": ["JS", "Ruby"],
+      "libraries": [],
+      "githubUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
+      "repositoryUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
+      "images": [
+        {
+          "micro": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-micro",
+            "size": 1228,
+            "width": 32,
+            "height": 22
+          },
+          "thumbnail": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-thumbnail",
+            "size": 4326,
+            "width": 224,
+            "height": 155
+          },
+          "mobile": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-mobile",
+            "size": 7821,
+            "width": 400,
+            "height": 277
+          },
+          "desktop": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-desktop",
+            "size": 7836,
+            "width": 400,
+            "height": 277
+          }
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=oGB_VPrld0U&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3",
+          "source": "youtube",
+          "sourceId": "oGB_VPrld0U"
+        }
+      ]
+    },
+    {
+      "name": "Proyecto-Ramon",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "url": "http://www.hooli.xyz/",
+      "highlights": [],
+      "keywords": [],
+      "roles": [],
+      "startDate": "",
+      "endDate": "",
+      "displayName": 55,
+      "website": "http://www.hooli.xyz/",
+      "summary": "Making files smaller",
+      "languages": ["JS", "Ruby"],
+      "libraries": [],
+      "githubUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
+      "repositoryUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
+      "images": [
+        {
+          "micro": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-micro",
+            "size": 1228,
+            "width": 32,
+            "height": 22
+          },
+          "thumbnail": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-thumbnail",
+            "size": 4326,
+            "width": 224,
+            "height": 155
+          },
+          "mobile": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-mobile",
+            "size": 7821,
+            "width": 400,
+            "height": 277
+          },
+          "desktop": {
+            "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-desktop",
+            "size": 7836,
+            "width": 400,
+            "height": 277
+          }
+        }
       ],
       "videos": [
         {
@@ -203,10 +399,7 @@
       "summary": "We fund companies trying to change the world",
       "highlights": [],
       "isCurrentRole": true,
-      "start": {
-        "year": 2020,
-        "month": 1
-      },
+      "start": { "year": 2020, "month": 1 },
       "end": {},
       "company": "Hendricks Venture Capital",
       "website": "https://gitconnected.com"
@@ -226,14 +419,8 @@
         "Discovered Middle-Out Compression which provides the highest standard for lossless compression"
       ],
       "isCurrentRole": false,
-      "start": {
-        "year": 2014,
-        "month": 4
-      },
-      "end": {
-        "year": 2019,
-        "month": 12
-      },
+      "start": { "year": 2014, "month": 4 },
+      "end": { "year": 2019, "month": 12 },
       "company": "Pied Piper",
       "website": "http://www.piedpiper.com/"
     },
@@ -248,14 +435,8 @@
       "summary": "I built the aggregation algorithm to track flights",
       "highlights": [],
       "isCurrentRole": false,
-      "start": {
-        "year": 2014,
-        "month": 3
-      },
-      "end": {
-        "year": 2014,
-        "month": 3
-      },
+      "start": { "year": 2014, "month": 3 },
+      "end": { "year": 2014, "month": 3 },
       "company": "Aviato",
       "website": ""
     }
@@ -267,11 +448,7 @@
       "releaseDate": "2019-12-01",
       "url": "http://www.piedpiper.com/company-news/",
       "summary": "Keep up with our company news and see how we're creating a decentralized internet bring the power back to the people",
-      "fullReleaseDate": {
-        "year": 2019,
-        "month": 12,
-        "day": null
-      },
+      "fullReleaseDate": { "year": 2019, "month": 12, "day": null },
       "website": "http://www.piedpiper.com/company-news/"
     }
   ],
@@ -287,14 +464,8 @@
       "courses": [],
       "description": "I studied computer science at Stanford",
       "activities": "",
-      "start": {
-        "year": 2012,
-        "month": null
-      },
-      "end": {
-        "year": 2014,
-        "month": null
-      },
+      "start": { "year": 2012, "month": null },
+      "end": { "year": 2014, "month": null },
       "website": "",
       "gpa": "4.0/4.0"
     }
@@ -309,14 +480,8 @@
       "summary": "Mentoring startup founders to help them launch and grow their companies.",
       "highlights": [],
       "location": "San Francisco, CA",
-      "start": {
-        "year": 2014,
-        "month": 4
-      },
-      "end": {
-        "year": 2019,
-        "month": 12
-      },
+      "start": { "year": 2014, "month": 4 },
+      "end": { "year": 2019, "month": 12 },
       "website": "http://hooli.com"
     }
   ],
@@ -326,10 +491,7 @@
       "date": "2019-12-01",
       "awarder": "Gavin Belson Foundation",
       "summary": "It's tech and ethics - tethics",
-      "fullDate": {
-        "year": 2019,
-        "month": 12
-      }
+      "fullDate": { "year": 2019, "month": 12 }
     }
   ],
   "languages": [],

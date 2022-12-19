@@ -1,87 +1,45 @@
-import { Url } from 'url'
 import myJson from './data.json'
+import fs from 'fs';
+import { IProject, IImage, IVideo} from './interfaces.model'
 
-interface Project {
-    "name":string,
-    "description": string,
-    "url": string,
-    "highlights": string[],
-    "keywords": string[],
-    "roles": string[],
-    "startDate": Date,
-    "endDate": Date,
-    "displayName": string,
-    "website": string,
-    "summary": string,
-    "languages": string[],
-    "libraries": string[],
-    "githubUrl": string,
-    "repositoryUrl": string,
-    "images": Image[], 
-    "videos": Video[]
-}
-
-interface Image{
-    "micro": {
-        "url": string,
-        "size": number,
-        "width": number,
-        "height": number
-    },
-    "thumbnail": {
-        "url": string,
-        "size": number,
-        "width": number,
-        "height": number
-    },
-    "mobile": {
-        "url": string,
-        "size": number,
-        "width": number,
-        "height": number
-    },
-    "desktop": {
-        "url": string,
-        "size": number,
-        "width": number,
-        "height": number
-    }
-}
-
-interface Video {
-    "url": string,
-    "source": string,
-    "sourceId": string
-}
+const json_portfolio = fs.readFileSync('src/model/data.json', 'utf-8');
+let portfolio = JSON.parse(json_portfolio);
 
 
 export class PortfolioModel {
 
-    static getPortfolio() {
+    static getPortfolio(){
         return myJson;
     }
-
-    getProjects() {
+    static getProjects(){
         return myJson.projects;
     }
-    getProject(position: number) {
-        return myJson.projects[position];
+    static getProject(position: string){
+        return myJson.projects[Number(position)];
     }
-
-    saveProject(position: number, project: Project){
-
-        // //PUT
-        // if(position){
-        //     myJson.projects.splice(position, 1, project)
-        // }else {
-        //     //POST
-        //     myJson.projects.push(project)
-        // }
-        
-        
+    static getProjectByLanguage(language: string){
+        let filteredProjectsByLanguage:any[] = [];
+        myJson.projects.forEach( element =>{
+            if (element.languages.includes(language)) {
+                filteredProjectsByLanguage.push(element);
+            }
+        })
+        return filteredProjectsByLanguage;
     }
-    deleteProject(position: number){
-        myJson.projects.splice(position,1)
+    static newProject(project: IProject){
+        portfolio.projects.push(project);
+        const json_portfolio = JSON.stringify(portfolio);
+        fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
+    }
+    static editProject(position: number, project: IProject){
+        portfolio.projects.splice(position, 1, project);
+        const json_portfolio = JSON.stringify(portfolio);
+        fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
+    }
+    static deleteProject(position: number){
+        portfolio.projects.splice(position,1);
+        const json_portfolio = JSON.stringify(portfolio);
+        fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
     }
 
 

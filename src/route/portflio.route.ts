@@ -3,7 +3,20 @@ import { portfolioController } from '../controller/portfolio.controller'
 
 const router = Router();
 
-//Get
-router.get('/portfolio', portfolioController.getPortfolio)
+//GET
+router.get('/portfolio', portfolioController.getPortfolio);
+router.get('/portfolio/project', portfolioController.getProjects);
+router.get('/portfolio/project/:id', portfolioController.getProject);
+router.get('/portfolio/project/language/:language', portfolioController.getProjectsByLanguage);
+
+//POST
+router.post('/portfolio/project', portfolioController.newProject);
+
+//PUT
+router.put('/portfolio/project/:id', portfolioController.editProject);
+
+//DELETE
+router.delete('/portfolio/project/:id', portfolioController.deleteProject);
+
 
 export default router;
