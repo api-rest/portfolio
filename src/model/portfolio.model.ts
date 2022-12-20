@@ -3,7 +3,7 @@ import fs from 'fs';
 import { IProject, IImage, IVideo} from './interfaces.model'
 
 const json_portfolio = fs.readFileSync('src/model/data.json', 'utf-8');
-let portfolio = JSON.parse(json_portfolio);
+export let portfolio = JSON.parse(json_portfolio);
 
 
 export class PortfolioModel {
