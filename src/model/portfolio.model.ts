@@ -15,12 +15,14 @@ export class PortfolioModel {
         return myJson.projects;
     }
     static getProject(position: string){
+       if (myJson.projects[Number(position)]){
         return myJson.projects[Number(position)];
+    }
     }
     static getProjectByLanguage(language: string){
         let filteredProjectsByLanguage:any[] = [];
         myJson.projects.forEach( element =>{
-            if (element.languages.includes(language)) {
+            if ((element.languages != undefined) && element.languages.includes(language)) {
                 filteredProjectsByLanguage.push(element);
             }
         })
