@@ -8,19 +8,21 @@ describe('Get whole portfolio', ()=>{
         const response = await request(app).get('/portfolio').send()
         expect(response.statusCode).toBe(200)
     })
-    // test('Get /portfolio should respond with a json object', async ()=>{
-    //     const response = await request(app).get('/portfolio').send()
-    //      expect(response.headers['content-type']).toEqual(expect.stringContaining('json'))
-    // })
-    // test('Get /portfolio does not return an empty json', async ()=>{
-    //     const response = await request(app).get('/portfolio').send()
-    //     expect(response.headers['content-type']).toEqual(expect.stringContaining('json'))
-    //     expect(response.body).not.toBeNull()
-    // })
-    // test('Get /portfolio does not return an empty json', async ()=>{
-    //     const response = await request(app).get('/portfolio').send()
-    //     expect(response.body.name).not.toBeUndefined()
-    // })
+    test('Get /portfolio should respond with a json object', async ()=>{
+        const response = await request(app).get('/portfolio').send()
+        //  expect(response.headers['content-type']).toEqual(expect.stringContaining('json'))
+         expect(response.type).toBe('application/json')
+    })
+    test('Get /portfolio does not return an empty json', async ()=>{
+        const response = await request(app).get('/portfolio').send()
+        // expect(response.body).not.toBeNull()
+        expect(response.noContent).toEqual(false)
+        
+    })
+    test('Get /portfolio should have a name into basics', async ()=>{
+        const response = await request(app).get('/portfolio').send()
+        expect(response.body.portfolio.basics.name).toBeDefined()
+    })
 })
 
 

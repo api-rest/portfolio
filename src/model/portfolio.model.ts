@@ -9,24 +9,44 @@ export let portfolio = JSON.parse(json_portfolio);
 export class PortfolioModel {
 
     static getPortfolio(){
-        return myJson;
+        if (Object.entries(portfolio).length) {
+            return myJson; 
+        }else {
+            return `Error: Databse empty`
+        }
     }
     static getProjects(){
-        return myJson.projects;
+        if (Object.entries(portfolio).length){
+            return portfolio.projects;
+        }else {
+            return `Error: Databse empty`
+        }
     }
     static getProject(position: string){
-       if (myJson.projects[Number(position)]){
-        return myJson.projects[Number(position)];
-    }
+        if (Object.entries(portfolio).length) {
+            if (portfolio.projects[Number(position)]){
+                return portfolio.projects[Number(position)];
+            }
+        }else {
+            return `Error: Databse empty`
+        }
+        
     }
     static getProjectByLanguage(language: string){
-        let filteredProjectsByLanguage:any[] = [];
-        myJson.projects.forEach( element =>{
+
+        if (Object.entries(portfolio).length) {
+            let filteredProjectsByLanguage:any[] = [];
+                portfolio.projects.forEach( (element: any) =>{
             if ((element.languages != undefined) && element.languages.includes(language)) {
                 filteredProjectsByLanguage.push(element);
             }
         })
         return filteredProjectsByLanguage;
+        }else {
+            return JSON.stringify('')
+        }
+
+        
     }
     static newProject(project: IProject){
         portfolio.projects.push(project);
@@ -34,14 +54,21 @@ export class PortfolioModel {
         fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
     }
     static editProject(position: number, project: IProject){
-        portfolio.projects.splice(position, 1, project);
-        const json_portfolio = JSON.stringify(portfolio);
-        fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
+
+        if(Object.entries(portfolio).length){
+            portfolio.projects.splice(position, 1, project);
+            const json_portfolio = JSON.stringify(portfolio);
+            fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
+        }
+
     }
     static deleteProject(position: number){
-        portfolio.projects.splice(position,1);
-        const json_portfolio = JSON.stringify(portfolio);
-        fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
+        if(Object.entries(portfolio).length) {
+            portfolio.projects.splice(position,1);
+            const json_portfolio = JSON.stringify(portfolio);
+            fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
+        }
+
     }
 
 
