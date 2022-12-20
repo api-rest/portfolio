@@ -90,7 +90,7 @@ export const portfolioController = {
        
         PortfolioModel.newProject(newProject);
         console.log(`New project entered with name ${displayName}`);
-        res.status(201).send(`New project entered with name ${displayName}`); //201 is the status for creating an object successfully
+        res.status(201).send(`New project entered}`); //201 is the status for creating an object successfully
         },
         
    
