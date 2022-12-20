@@ -1,6 +1,6 @@
 import jest from 'jest';
-import app from '../src/app';
 import request from 'supertest';
+import app from '../src/app';
 
 import {PortfolioModel} from '../src/model/portfolio.model';
 const Portfolio = new PortfolioModel();
