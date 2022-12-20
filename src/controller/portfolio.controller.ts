@@ -38,29 +38,15 @@ export const portfolioController = {
     getProjectsByLanguage: (req:Request, res:Response) => {
         const language = req.params.language;
         const response = PortfolioModel.getProjectByLanguage(language);
-        
-        myJson.projects.forEach(element => {
-        if ((element.languages) && element.languages.includes(language)){
-            console.log(`Projects with ${language} language showed`);
-            res.json({project:response})  
-        }
-        else {res.status(400).send(`There is no project in ${language} language`)
-            console.log(`There is no project in ${language}`)}
-        })
 
-        // myJson.projects.forEach(element =>{
-        //     if(response){
-        //         console.log(`Projects with ${language} language showed`);
-        //         res.json({project:response})  
-        //     }
-        //     else if (!myJson.projects.length){
-        //         res.status(400).send(`There is no project in ${language} language`)
-        //         console.log(`There is no project in ${language}`)
-        //     } 
-        // })
-        
-
-    },
+        if(!myJson.projects.length)
+            {res.status(400).send('There are no projects in this portfolio')}
+        else if (!response.length) 
+            {res.status(400).send(`There is no project in ${language} language`)
+            console.log(`There is no project in ${language}`)}            
+        else {res.status(200).send(response)
+        console.log(`Showing projects in ${language}`)}                 
+        },
 
 
     newProject: (req:Request, res:Response) => {
