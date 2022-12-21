@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../src/app';
+import {app,server} from '../src/app';
 import { portfolio } from '../src/model/portfolio.model';
 import { projectToTest } from './helperTest';
 
@@ -100,7 +100,9 @@ describe('Delete a project', ()=>{
         const response = await request(app).delete('/portfolio/project/0').send()
         expect(portfolio.projects.length).toEqual(numberOfProjects - 1)
     })
-
-
 })
+})
+
+afterAll(()=>{
+    server.close()
 })
