@@ -1,30 +1,36 @@
 import fs from 'fs';
 import { IProject, IImage, IVideo} from './interfaces.model'
 
-const json_portfolio = fs.readFileSync('src/model/data.json', 'utf-8');
-export let portfolio = JSON.parse(json_portfolio);
+let json_portfolio;
+export let portfolio: any;
 
-// -------------- Use the following for Testing (remember to comment the 2 lines above) -------------
-// const json_portfolio = fs.readFileSync('src/model/dataTesting.json', 'utf-8');
-// export let portfolio = JSON.parse(json_portfolio);
+if (process.env.NODE_ENV !== 'production') {
+    json_portfolio = fs.readFileSync('src/model/dataTesting.json', 'utf-8');
+    portfolio = JSON.parse(json_portfolio);
+}else {
+    json_portfolio = fs.readFileSync('src/model/data.json', 'utf-8');
+    portfolio = JSON.parse(json_portfolio);
+}
+
+
 
 export class PortfolioModel {
 
-    static getPortfolio(){
+    getPortfolio(){
         if (Object.entries(portfolio).length) {
             return portfolio; 
         }else {
             return `Error: Database empty`
         }
     }
-    static getProjects(){
+    getProjects(){
         if (Object.entries(portfolio).length){
             return portfolio.projects;
         }else {
             return `Error: Database empty`
         }
     }
-    static getProject(position: string){
+    getProject(position: string){
         if (Object.entries(portfolio).length) {
             if (portfolio.projects[Number(position)]){
                 return portfolio.projects[Number(position)];
@@ -34,7 +40,7 @@ export class PortfolioModel {
         }
         
     }
-    static getProjectByLanguage(language: string){
+    getProjectByLanguage(language: string){
 
         if (Object.entries(portfolio).length) {
             let filteredProjectsByLanguage:any[] = [];
@@ -50,12 +56,12 @@ export class PortfolioModel {
 
         
     }
-    static newProject(project: IProject){
+    newProject(project: IProject){
         portfolio.projects.push(project);
         const json_portfolio = JSON.stringify(portfolio);
         fs.writeFileSync('src/model/data.json', json_portfolio, 'utf-8');
     }
-    static editProject(position: number, project: IProject){
+    editProject(position: number, project: IProject){
 
         if(Object.entries(portfolio).length){
             portfolio.projects.splice(position, 1, project);
@@ -64,7 +70,7 @@ export class PortfolioModel {
         }
 
     }
-    static deleteProject(position: number){
+    deleteProject(position: number){
         if(Object.entries(portfolio).length) {
             portfolio.projects.splice(position,1);
             const json_portfolio = JSON.stringify(portfolio);

@@ -2,9 +2,11 @@ import { Request, Response } from 'express';
 import { PortfolioModel } from '../model/portfolio.model';
 import {portfolio} from '../model/portfolio.model'
 
+const modelPortfolio = new PortfolioModel;
+
 export const portfolioController = {
     getPortfolio: async (req:Request, res:Response)=> {
-        const response = PortfolioModel.getPortfolio();
+        const response = modelPortfolio.getPortfolio();
         if (portfolio != undefined) {
             try {
                 console.log("Portfolio showed");
@@ -19,7 +21,7 @@ export const portfolioController = {
     },
 
     getProjects: async(req:Request, res:Response) => {
-        const response = PortfolioModel.getProjects();
+        const response = modelPortfolio.getProjects();
         if (portfolio != undefined) {
             try {
                 console.log("All projects showed");
@@ -33,7 +35,7 @@ export const portfolioController = {
     },
 
     getProject: (req:Request, res:Response) => {
-        const response = PortfolioModel.getProject(req.params.id);
+        const response = modelPortfolio.getProject(req.params.id);
         if (portfolio.projects.length) {
             if (Number(req.params.id) < portfolio.projects.length) {
                     console.log(`Project in position ${req.params.id} showed`);
@@ -48,7 +50,7 @@ export const portfolioController = {
 
     getProjectsByLanguage: (req:Request, res:Response) => {
         const language = req.params.language;
-        const response = PortfolioModel.getProjectByLanguage(language);
+        const response = modelPortfolio.getProjectByLanguage(language);
 
         if(!portfolio.projects.length)
             {res.status(400).send('There are no projects in this portfolio')}
@@ -88,7 +90,7 @@ export const portfolioController = {
             videos
         }
        
-        PortfolioModel.newProject(newProject);
+        modelPortfolio.newProject(newProject);
         console.log(`New project entered with name ${displayName}`);
         res.status(201).send(`New project entered}`); //201 is the status for creating an object successfully
         },
@@ -121,7 +123,7 @@ export const portfolioController = {
         const id= Number(req.params.id); 
         portfolio.projects.forEach((element: any)=>{
             if (portfolio.projects[id]) {
-                PortfolioModel.editProject(id, editedProject);
+                modelPortfolio.editProject(id, editedProject);
                 console.log(`Project in position ${id} has been edited`);
                 res.status(200).send(`Project in position ${id} has been edited`); 
             }else {
@@ -134,7 +136,7 @@ export const portfolioController = {
     deleteProject: (req:Request, res:Response) => {
         const id = Number(req.params.id);
         if (portfolio.projects[id]) {
-            PortfolioModel.deleteProject(id);
+            modelPortfolio.deleteProject(id);
             console.log(`Project in position ${req.params.id} has been deleted`);
             res.status(200).send(`Project in position ${req.params.id} has been deleted`);
         } else {
